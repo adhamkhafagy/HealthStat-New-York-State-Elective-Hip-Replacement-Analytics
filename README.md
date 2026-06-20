@@ -75,3 +75,10 @@ To create dynamic benchmarks that adapt to user filtering while preserving globa
 - **Primary Cost Drivers:** According to the machine learning Key Influencers analysis, when a patient's **severity of illness is classified as Extreme**, the average cost per discharge spikes drastically by **+$37.3K**.
 - **Discharge Impact on Efficiency:** Patients discharged to a **Skilled Nursing Home** experience an average increase of **1.29 days** in LOS compared to standard home discharges, highlighting a major operational transition bottleneck.
 - **Extreme Outliers:** While the state average cost is $21K, peak outlier facilities reach as high as **$85K per discharge** (e.g., NYU Lutheran Medical Center), signaling a severe need for cost standardization.
+
+## 📂 Repository Structure
+```text
+├── Visuals/               # Home Page.png, LOS Comparison.png, Cost Comparison.png, Hospital Profile.png
+├── HealthStat_Report.pbix # Complete Power BI Desktop File
+├── DAX_Measures.md        # Full DAX Measures & Calculated Columns Reference
+└── README.md              # Project Documentation
