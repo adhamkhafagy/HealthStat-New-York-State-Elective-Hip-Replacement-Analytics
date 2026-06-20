@@ -48,3 +48,30 @@ To create dynamic benchmarks that adapt to user filtering while preserving globa
       [Average Cost per Discharge],
       ALL()
   )
+
+Variance Analysis against Baseline:
+
+  % Var Average Cost per Discharge = 
+  CALCULATE(
+      DIVIDE(([Average Cost Per Discharge] - [Average Cost per Discharge ALL]), [Average Cost per Discharge ALL])
+  )
+
+Dynamic UI Title Generation:
+
+  Title Selected Facility = 
+  "Hospital Profile: " & VALUES(hospital_inpatient_discharges_totalhipreplacement[facility_name])
+
+Engineered Columns & Summary Tables:
+Age Bins: Grouped patient demographics into a binary format (Age 50+ vs Age <50) to evaluate risk exposure profiles.
+
+Surgical Program Summary Table: Created a summarized table using SUMMARIZECOLUMNS to classify program sizes based on discharge volume thresholds (<200, 200-399, 400-599, >=600).
+
+##💡 Key Analytical Insights
+Statewide Baselines: The standard baseline for an elective hip replacement in NY State sits at an Average LOS of 2.65 days and an Average Cost of $21K.
+
+Primary Cost Drivers: According to the machine learning Key Influencers analysis, when a patient's severity of illness is classified as Extreme, the average cost per discharge spikes drastically by +$37.3K.
+
+Discharge Impact on Efficiency: Patients discharged to a Skilled Nursing Home experience an average increase of 1.29 days in LOS compared to standard home discharges, highlighting a major operational transition bottleneck.
+
+Extreme Outliers: While the state average cost is $21K, peak outlier facilities reach as high as $85K per discharge (e.g., NYU Lutheran Medical Center), signaling a severe need for cost standardization.
+
