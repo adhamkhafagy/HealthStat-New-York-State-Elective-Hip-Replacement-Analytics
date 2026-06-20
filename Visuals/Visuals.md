@@ -1,6 +1,6 @@
 ## Home
 
-![Visuals](Home_page.png)
+![Visuals](Home_Page.png)
 
 ## LOS Comparison
 
