@@ -1,1 +1,55 @@
 
+1- % Var Average Cost per Discharge = CALCULATE(DIVIDE(([Average Cost Per Discharge]-[Average Cost per Discharge ALL]),[Average Cost per Discharge ALL]))
+
+2- % Var Average LOS Days = CALCULATE(DIVIDE(([Average LOS Days]-[Average LOS Days ALL]),[Average LOS Days ALL]))
+
+3- Average Cost Per Discharge = DIVIDE(SUM(hospital_inpatient_discharges_totalhipreplacement[total_costs]),[Total Discharges])
+
+4- Average Cost per Discharge ALL = 
+CALCULATE(
+    [Average Cost per Discharge],
+    ALL()
+)
+
+5- Average LOS Days = AVERAGE(hospital_inpatient_discharges_totalhipreplacement[length_of_stay])
+
+6- Average LOS Days ALL = 
+CALCULATE(
+    [Average LOS Days],
+    ALL()
+)
+
+7- Title Selected Facility = 
+"Hospital Profile: " & VALUES(hospital_inpatient_discharges_totalhipreplacement[facility_name])
+
+8- Total Discharges = COUNT(hospital_inpatient_discharges_totalhipreplacement[patient_disposition])
+
+9- Total Hospitals = DISTINCTCOUNT(hospital_inpatient_discharges_totalhipreplacement[facility_id])
+
+10- Total Surgeons = DISTINCTCOUNT(hospital_inpatient_discharges_totalhipreplacement[operating_provider_license_number])
+
+Custom Columns
+
+1- Age Bins = 
+IF(
+    OR(
+        hospital_inpatient_discharges_totalhipreplacement[age_group] = "50 to 69",
+        hospital_inpatient_discharges_totalhipreplacement[age_group] = "70 or Older"
+    ),
+    "Age 50+",
+    "Age <50"
+)
+
+Calculated Table
+1- surgical_program_volume_summary = SUMMARIZECOLUMNS(hospital_inpatient_discharges_totalhipreplacement[facility_name],
+"Total Discharges",[Total Discharges],
+"Total Surgeons",[Total Surgeons])
+
+Custom Columns in this Calculated table
+
+1- Surgical Program Size = SWITCH(TRUE(),
+surgical_program_volume_summary[Total Discharges (bins)] = 0, "<200",
+surgical_program_volume_summary[Total Discharges (bins)] = 200, "200-399",
+surgical_program_volume_summary[Total Discharges (bins)] = 400, "400-599",
+">=600")
+ 
