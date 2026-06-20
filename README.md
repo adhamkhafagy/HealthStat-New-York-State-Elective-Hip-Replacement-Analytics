@@ -12,23 +12,23 @@ By establishing statewide baselines, this dashboard allows hospital administrato
 The interactive report consists of 4 core views designed for seamless navigation:
 
 ### 1. Home Page
-![Home Page](Visuals/Home Page.png)
+![Home Page](Visuals/Home_Page.png)
 * Minimalist, professional landing page featuring an intuitive navigation bar to guide users across different analysis modules.
 
 ### 2. LOS Comparison
-![LOS Comparison](Visuals/LOS Comparison.png)
+![LOS Comparison](Visuals/LOS_Comparison.png)
 * Evaluates efficiency across **151 hospitals** and **627 surgeons**.
 * Employs the **Key Influencers AI visual** to reveal what factors (such as a 'Major' or 'Extreme' risk of mortality) drive up patient length of stay.
 * Tracks the top 15 hospitals by discharge volume alongside their corresponding average LOS.
 
 ### 3. Cost Comparison
-![Cost Comparison](Visuals/Cost Comparison.png)
+![Cost Comparison](Visuals/Cost_Comparison.png)
 * Dissects the **$21K statewide average cost per discharge** across **26K total discharges**.
 * Features a scatter plot analysis comparing *Average LOS vs. Average Cost per Discharge* to isolate high-cost, low-efficiency regional facilities.
 * Highlights the top and bottom performing hospitals based on cost variance against the state baseline.
 
 ### 4. Hospital Profile
-![Hospital Profile](Visuals/Hospital Profile.png)
+![Hospital Profile](Visuals/Hospital_Profile.png)
 * A granular, single-facility deep dive (e.g., University Hospital) utilizing dynamic Gauge charts.
 * Compares the specific hospital's performance directly against the **Statewide Average (ALL)** for both cost and LOS.
 * Categorizes clinical profiles by severity of illness, risk of mortality, primary diagnosis descriptions, and post-discharge patient disposition.
