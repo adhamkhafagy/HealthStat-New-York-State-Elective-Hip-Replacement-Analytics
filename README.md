@@ -78,7 +78,7 @@ To create dynamic benchmarks that adapt to user filtering while preserving globa
 
 ## 📂 Repository Structure
 ```text
-├── Visuals/               # Home Page.png, LOS Comparison.png, Cost Comparison.png, Hospital Profile.png
-├── HealthStat_Report.pbix # Complete Power BI Desktop File
-├── DAX_Measures.md        # Full DAX Measures & Calculated Columns Reference
+├── Visuals/               # Home_Page.png, LOS_Comparison.png, Cost_Comparison.png, Hospital_Profile.png
+├── DAX Measures       # Full DAX Measures & Calculated Columns Reference
+├── HealthStat-New-York-State-Elective-Hip-Replacement-Analytics.pbix # Complete Power BI Desktop File
 └── README.md              # Project Documentation
